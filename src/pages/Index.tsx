@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import PublishCard from "@/components/PublishCard";
 import WebsiteCollections from "@/components/WebsiteCollections";
 import MediaLibrary from "@/components/MediaLibrary";
 import EnvironmentSelector, { XMCloudEnvironment } from "@/components/EnvironmentSelector";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 // Mock data - replace with real data from your API
 const mockEnvironments: XMCloudEnvironment[] = [
@@ -116,11 +116,14 @@ const Index = () => {
   const selectedEnvironment = mockEnvironments.find(env => env.id === selectedEnvironmentId)!;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-background to-secondary">
       <div className="container mx-auto py-8">
-        <div className="space-y-2 mb-8 animate-slide-up">
-          <h1 className="text-3xl font-semibold text-primary">XM Cloud - Bird's Eye View</h1>
-          <p className="text-gray-500">Overview of your Sitecore XM Cloud environments</p>
+        <div className="flex justify-between items-center mb-8">
+          <div className="space-y-2 animate-slide-up">
+            <h1 className="text-3xl font-semibold text-primary">XM Cloud - Bird's Eye View</h1>
+            <p className="text-muted-foreground">Overview of your Sitecore XM Cloud environments</p>
+          </div>
+          <ThemeToggle />
         </div>
 
         <EnvironmentSelector
