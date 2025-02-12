@@ -119,7 +119,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto py-8">
         <div className="space-y-2 mb-8 animate-slide-up">
-          <h1 className="text-3xl font-semibold text-primary">Dashboard</h1>
+          <h1 className="text-3xl font-semibold text-primary">XM Cloud - Bird's Eye View</h1>
           <p className="text-gray-500">Overview of your Sitecore XM Cloud environments</p>
         </div>
 
